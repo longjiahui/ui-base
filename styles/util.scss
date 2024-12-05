@@ -1,0 +1,6 @@
+.stretch {
+	@apply flex-1 min-w-0 min-h-0;
+}
+.clickable {
+	@apply cursor-pointer transition-[opacity] duration-300;
+}
