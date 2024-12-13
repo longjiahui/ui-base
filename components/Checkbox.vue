@@ -1,4 +1,4 @@
 <template>
-	<ACheckbox></ACheckbox>
+  <ACheckbox></ACheckbox>
 </template>
 <script setup lang="ts"></script>
