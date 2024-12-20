@@ -120,6 +120,11 @@ export function formatDate(d: any, format = "YYYY/MM/DD") {
   return val.isValid() ? val.format(format) : "Invalid Date"
 }
 
+export function formatDateTime(d: any, format = "YYYY/MM/DD HH:mm:ss") {
+  const val = dayjs(d)
+  return val.isValid() ? val.format(format) : "Invalid Date"
+}
+
 export function useWatchValidate<D extends object>(
   entity: MaybeRef<D>,
   rules: Rules<D>,
