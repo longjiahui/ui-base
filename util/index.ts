@@ -120,7 +120,7 @@ export function formatDate(d: any, format = "YYYY/MM/DD") {
   return val.isValid() ? val.format(format) : "Invalid Date"
 }
 
-export function formatDateTime(d: any, format = "YYYY/MM/DD HH:mm:ss") {
+export function formatDateTime(d: any, format = "YYYY/MM/DD HH:mm") {
   const val = dayjs(d)
   return val.isValid() ? val.format(format) : "Invalid Date"
 }
