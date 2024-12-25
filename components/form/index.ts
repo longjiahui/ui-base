@@ -7,9 +7,11 @@ export { default as Form } from "./Form.vue"
 export { default as FormInput } from "./FormInput.vue"
 export { default as FormItem } from "./FormItem.vue"
 export { default as FormTextarea } from "./FormTextarea.vue"
+export { default as FormTimePicker } from "./FormTimePicker.vue"
 export { default as FormSelect } from "./FormSelect.vue"
 export { default as FormCheckbox } from "./FormCheckbox.vue"
 export { default as FormSwitch } from "./FormSwitch.vue"
+
 export * from "./form"
 import type { Ref } from "vue"
 

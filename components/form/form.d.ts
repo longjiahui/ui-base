@@ -1,4 +1,4 @@
-import { Form, FormItem, FormInput, FormTextarea } from "."
+import { Form, FormItem, FormInput, FormTextarea, FormTimePicker } from "."
 import FormCheckboxVue from "./FormCheckbox.vue"
 import FormSwitchVue from "./FormSwitch.vue"
 import FormSelectVue from "./FormSelect.vue"
@@ -13,6 +13,7 @@ export type UseFormReturnType<T extends Partial<Record<any, any>>> = {
   Form: typeof Form<T>
   FormItem: typeof FormItem<T>
   FormInput: typeof FormInput<T>
+  FormTimePicker: typeof FormTimePicker<T>
   FormTextarea: typeof FormTextarea<T>
   FormSelect: typeof FormSelectVue<T>
   FormCheckbox: typeof FormCheckboxVue<T>
