@@ -19,6 +19,8 @@ dayjs.extend(isLeapYear)
 dayjs.extend(weekOfYear)
 // dayjs.extend(weekday)
 
+import Decimal from "decimal.js"
+
 export * from "./storage"
 export * from "./traverse"
 export * from "./validate"
@@ -123,6 +125,17 @@ export function formatDate(d: any, format = "YYYY/MM/DD") {
 export function formatDateTime(d: any, format = "YYYY/MM/DD HH:mm") {
   const val = dayjs(d)
   return val.isValid() ? val.format(format) : "Invalid Date"
+}
+
+export function toFixedNumber(
+  d: string | Decimal | number | undefined | null,
+  toFixed = 2,
+) {
+  if (isNaN(+d!)) {
+    return "0"
+  }
+  d = +d!
+  return (+d.toFixed(toFixed)).toString()
 }
 
 export function useWatchValidate<D extends object>(
