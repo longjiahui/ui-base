@@ -121,8 +121,17 @@ export function formatDate(d: any, format = "YYYY/MM/DD") {
   const val = dayjs(d)
   return val.isValid() ? val.format(format) : "Invalid Date"
 }
+export function formatMonth(d: any, format = "YYYY-MM") {
+  const val = dayjs(d)
+  return val.isValid() ? val.format(format) : "Invalid Date"
+}
 
 export function formatDateTime(d: any, format = "YYYY/MM/DD HH:mm") {
+  const val = dayjs(d)
+  return val.isValid() ? val.format(format) : "Invalid Date"
+}
+
+export function formatTime(d: any, format = "HH:mm") {
   const val = dayjs(d)
   return val.isValid() ? val.format(format) : "Invalid Date"
 }
@@ -177,4 +186,26 @@ export function useWatchValidate<D extends object>(
 export function getHSLHash(val: string) {
   let random = SeedRandom(val || "")
   return Math.floor(random() * 361)
+}
+
+export function omit<T extends Record<string, any>, K extends keyof T>(
+  val: T,
+  keys: K[] | K,
+): Omit<T, K> {
+  const ret = { ...val }
+  keys = keys instanceof Array ? keys : [keys]
+  keys.forEach((k) => delete ret[k])
+  return ret
+}
+
+export function pick<T extends Record<string, any>, K extends keyof T>(
+  val: T,
+  keys: K | K[],
+) {
+  const ret: { [k in K]?: T[K] } = {}
+  keys = keys instanceof Array ? keys : [keys]
+  keys.forEach((k) => {
+    ret[k] = val[k]
+  })
+  return ret as Pick<T, K>
 }

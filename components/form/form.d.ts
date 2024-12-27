@@ -10,6 +10,7 @@ import FormCheckboxVue from "./FormCheckbox.vue"
 import FormSwitchVue from "./FormSwitch.vue"
 import FormSelectVue from "./FormSelect.vue"
 import FormDatePickerInMonth from "./FormDatePickerInMonth.vue"
+import FormMonthRangePicker from "./FormMonthRangePicker.vue"
 import type { GenericComponentProps } from "../../type"
 import type { EmitsOptions, SetupContext, SlotsType } from "vue"
 
@@ -21,6 +22,7 @@ export type UseFormReturnType<T extends Partial<Record<any, any>>> = {
   Form: typeof Form<T>
   FormItem: typeof FormItem<T>
   FormInput: typeof FormInput<T>
+  FormMonthRangePicker: typeof FormMonthRangePicker<T>
   FormDatePicker: typeof FormDatePicker<T>
   FormDatePickerInMonth: typeof FormDatePickerInMonth<T>
   FormTimePicker: typeof FormTimePicker<T>
