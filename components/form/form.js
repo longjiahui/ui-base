@@ -3,6 +3,7 @@ import FormItem from "./FormItem.vue"
 import FormInput from "./FormInput.vue"
 import FormTextarea from "./FormTextarea.vue"
 import FormTimePicker from "./FormTimePicker.vue"
+import FormDateTimePicker from "./FormDateTimePicker.vue"
 import FormMonthRangePicker from "./FormMonthRangePicker.vue"
 import FormDatePicker from "./FormDatePicker.vue"
 import FormDatePickerInMonth from "./FormDatePickerInMonth.vue"
@@ -27,6 +28,7 @@ export function useForm(components = {}) {
     FormSelect,
     FormSwitch,
     FormCheckbox,
+    FormDateTimePicker,
     ...components,
   }
 }
