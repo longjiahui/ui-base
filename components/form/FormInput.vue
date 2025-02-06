@@ -30,19 +30,13 @@
 <script
   lang="ts"
   setup
-  generic="
-    T extends Partial<Record<any, any>>,
-    Key extends keyof T = keyof T,
-    Value extends T[Key] extends string | number | undefined | null
-      ? T[Key]
-      : never = any
-  "
+  generic="T extends Partial<Record<any, any>>, Key extends keyof T = keyof T"
 >
 import { useFormItem } from "./form"
 import { InputType, Autocomplete } from "../Input.vue"
 
 defineProps<{
-  name: Key & Value
+  name: Key
   // 可以关闭name警告
   noName?: boolean
   label?: string
